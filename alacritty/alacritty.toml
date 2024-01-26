@@ -1,0 +1,21 @@
+[font]
+size = 24
+
+[font.normal]
+family = "MesloLGS NF"
+[font.bold]
+family = "MesloLGS NF"
+
+[window]
+decorations = "transparent"
+opacity = 0.9
+startup_mode = "Fullscreen"
+
+[window.padding]
+x = 7
+y = 0
+[keyboard]
+bindings = [
+  {key = "t", mods = "Command", action = "None"},
+  {key = "F1", action = "None"}
+]
