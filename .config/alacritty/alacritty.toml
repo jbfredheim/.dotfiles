@@ -7,9 +7,9 @@ family = "MesloLGS NF"
 family = "MesloLGS NF"
 
 [window]
-decorations = "transparent"
+decorations = "None"
 opacity = 0.9
-startup_mode = "Fullscreen"
+startup_mode = "Maximized"
 
 [window.padding]
 x = 7
