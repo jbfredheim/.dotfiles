@@ -16,7 +16,7 @@ source "$CONFIG_DIR/colors.sh"
 # https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
 
 sketchybar --bar height=40        \
-                 blur_radius=30   \
+                 blur_radius=0   \
                  position=top     \
                  sticky=off       \
                  padding_left=10  \

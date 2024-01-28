@@ -3,8 +3,36 @@ return {
 	name = "catppuccin",
 	priority = 1000,
 	config = function()
-		vim.cmd([[colorscheme catppuccin-mocha]])
+		vim.cmd([[colorscheme catppuccin]])
 		require("catppuccin").setup({
+			flavour = "macchiato",
+			transparent_background = true,
+			integrations = {
+				nvimtree = true,
+				cmp = true,
+				treesitter = true,
+				native_lsp = {
+					enabled = true,
+					virtual_text = {
+						errors = { "italic" },
+						hints = { "italic" },
+						warnings = { "italic" },
+						information = { "italic" },
+					},
+					underlines = {
+						errors = { "underline" },
+						hints = { "underline" },
+						warnings = { "underline" },
+						information = { "underline" },
+					},
+					inlay_hints = {
+						background = true,
+					},
+				},
+				telescope = {
+					enabled = true,
+				},
+			},
 			color_overrides = {
 				latte = {
 					rosewater = "#dc8a78",

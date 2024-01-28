@@ -18,4 +18,55 @@ y = 0
 bindings = [
   {key = "t", mods = "Command", action = "None"},
   {key = "F1", action = "None"}
+
 ]
+[colors.primary]
+background = "#24273A"
+foreground = "#CAD3F5"
+dim_foreground = "#CAD3F6"
+bright_foreground = "#CAD3F5"
+
+[colors.cursor]
+text = "#24273A"
+cursor = "#F4DBD6"
+
+[colors.vi_mode_cursor]
+text = "#24273A"
+cursor = "#F4DBD6"
+
+[colors.search]
+matches = {foreground = "#24273A", background = "#A5ADCB"}
+focused_match = {foreground = "#24273A", background = "#A6DA95"}
+
+[colors.hints]
+start = {foreground = "#24273A", background = "#EED49F"}
+end = {foreground = "#24273A", background = "#A5ADCB"}
+
+[colors.selection]
+text = "#24273A"
+background = "#F4DBD6"
+
+[colors.normal]
+    black = "#494D64" # surface1
+    red = "#ED8796" # red
+    green = "#A6DA95" # green
+    yellow = "#EED49F" # yellow
+    blue = "#8AADF4" # blue
+    magenta = "#F5BDE6" # pink
+    cyan = "#8BD5CA" # teal
+    white = "#B8C0E0" # subtext1
+  [colors.dim]
+    black = "#494D64" # surface1
+    red = "#ED8796" # red
+    green = "#A6DA95" # green
+    yellow = "#EED49F" # yellow
+    blue = "#8AADF4" # blue
+    magenta = "#F5BDE6" # pink
+    cyan = "#8BD5CA" # teal
+    white = "#B8C0E0" # subtext1
+
+  [colors]
+  indexed_colors = [
+     { index = 16, color = "#F5A97F" },
+     { index = 17, color = "#F4DBD6" }
+     ]

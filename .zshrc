@@ -34,8 +34,8 @@ export PATH="${PATH}:${SCRIPTS_DIR}"
 export EDITOR="nvim"
 export VISUAL="nvim"
 
-alias ls="ls -la"
-alias l="ls -la"
+alias ls="ls -Gla"
+alias l="ls -Gla"
 alias v=nvim
 alias vim=nvim
 alias s="source ~/.zshrc"
