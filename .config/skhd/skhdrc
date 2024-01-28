@@ -1,8 +1,8 @@
 # Change focused window within space
-shift + alt - h : yabai -m window --focus --west
-shift + alt - j : yabai -m window --focus --south
-shift + alt - k : yabai -m window --focus --north
-shift + alt - l : yabai -m window --focus --east
+shift + alt - h : yabai -m window --focus west || yabai -m window --focus first
+shift + alt - j : yabai -m window --focus south || yabai -m window --focus last
+shift + alt - k : yabai -m window --focus north || yabai -m window --focus first
+shift + alt - l : yabai -m window --focus east || yabai -m window --focus last
 
 # Change layout of focused space
 shift + alt - r : yabai -m space --rotate 270
@@ -12,18 +12,23 @@ shift + alt - m : yabai -m window --toggle zoom-fullscreen
 shift + alt - e : yabai -m space --balance
 
 # Move window to space
-shift + alt - 1 : yabai -m window --space 1
-shift + alt - 2 : yabai -m window --space 2
-shift + alt - 3 : yabai -m window --space 3
-shift + alt - 4 : yabai -m window --space 4
-shift + alt - 5 : yabai -m window --space 5
+shift + cmd - 1 : "${XDG_CONFIG_HOME}"/scripts/yabai_move_window_to_space 1
+shift + cmd - 2 : "${XDG_CONFIG_HOME}"/scripts/yabai_move_window_to_space 2
+shift + cmd - 3 : "${XDG_CONFIG_HOME}"/scripts/yabai_move_window_to_space 3
+shift + cmd - 4 : "${XDG_CONFIG_HOME}"/scripts/yabai_move_window_to_space 4
+shift + cmd - 5 : "${XDG_CONFIG_HOME}"/scripts/yabai_move_window_to_space 5
+shift + cmd - 6 : "${XDG_CONFIG_HOME}"/scripts/yabai_move_window_to_space 6
+shift + cmd - 7 : "${XDG_CONFIG_HOME}"/scripts/yabai_move_window_to_space 7
+
 
 # focus space
-cmd - 1 : yabai -m space --focus 1
-cmd - 2 : yabai -m space --focus 2
-cmd - 3 : yabai -m space --focus 3
-cmd - 4 : yabai -m space --focus 4
-cmd - 5 : yabai -m space --focus 5
+cmd - 1 : yabai -m space --focus 1 && yabai -m window --focus first
+cmd - 2 : yabai -m space --focus 2 && yabai -m window --focus first
+cmd - 3 : yabai -m space --focus 3 && yabai -m window --focus first
+cmd - 4 : yabai -m space --focus 4 && yabai -m window --focus first
+cmd - 5 : yabai -m space --focus 5 && yabai -m window --focus first
+cmd - 6 : yabai -m space --focus 6 && yabai -m window --focus first
+cmd - 7 : yabai -m space --focus 7 && yabai -m window --focus first
 
 # stop/start/restart
 cmd - q : yabai --stop-service

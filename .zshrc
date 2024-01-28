@@ -28,6 +28,9 @@ source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export XDG_CONFIG_HOME="$HOME/.config"
+
+SCRIPTS_DIR="${XDG_CONFIG_HOME}/scripts/"
+export PATH="${PATH}:${SCRIPTS_DIR}"
 export EDITOR="nvim"
 export VISUAL="nvim"
 
