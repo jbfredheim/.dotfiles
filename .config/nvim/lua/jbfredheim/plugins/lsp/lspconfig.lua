@@ -93,6 +93,8 @@ return {
 			on_attach = on_attach,
 		})
 
+		lspconfig["jdtls"].setup({})
+
 		-- configure graphql language server
 		lspconfig["graphql"].setup({
 			capabilities = capabilities,
