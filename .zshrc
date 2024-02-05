@@ -5,14 +5,13 @@ fi
 
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
 if [ "$OS_NAME" = 'Linux' ]; then
-  echo "yeya"
 fi
 
 if [ "$OS_NAME" = "Darwin" ]; then
@@ -52,6 +51,16 @@ alias dev="cd ~/dev"
 alias auge="cd ~/dev/auge/"
 alias vbd="nvim ~/dev/auge/barad-dur/"
 alias c=clear
+
+# Git alias'
+alias gs="git status"
+alias ga="git add"
+alias gaa="git add --all"
+alias gc="git commit"
+alias gcm="git commit -m "
+alias gf="git fetch"
+alias gp="git pull"
+alias gP="git push"
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
