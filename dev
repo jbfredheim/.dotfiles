@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+current_dir=$(pwd)
+config_dir="$HOME/.configtest"
+
+mkdir -p "$config_dir"
+
+OS_NAME="$(uname -s)"
+linked_folders=()  # Initialize an empty array to store linked folders
+
+for folder in */; do
+  if [ -d "$folder" ]; then
+    case $folder in
+      "nvim/"|"alacritty/")
+        ln -s "$current_dir/$folder" "$config_dir/"
+        linked_folders+=("$folder")
+        ;;
+      *)
+        if [ "$OS_NAME" = 'Linux' ]; then
+          case $folder in
+            "hypr/"|"neofetch/"|"waybar/")
+              ln -s "$current_dir/$folder" "$config_dir/"
+              linked_folders+=("$folder")
+              ;;
+          esac
+        fi
+        if [ "$OS_NAME" = "Darwin" ]; then
+          case $folder in
+            "yabai/"|"skhd/"|"sketchybar/")
+              ln -s "$current_dir/$folder" "$config_dir/"
+              linked_folders+=("$folder")
+              ;;
+          esac
+        fi
+        ;;
+    esac
+  fi
+done
+
+echo "Detected OS: $OS_NAME"
+if [ ${#linked_folders[@]} -gt 0 ]; then
+    echo "Linked folders: ${linked_folders[@]}"
+else
+    echo "No folders were linked."
+fi
