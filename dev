@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 current_dir=$(pwd)
-config_dir="$HOME/.configtest"
+config_dir="$HOME/.config"
 
 mkdir -p "$config_dir"
 
