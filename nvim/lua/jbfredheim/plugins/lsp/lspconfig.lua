@@ -58,7 +58,9 @@ return {
 			opts.desc = "Restart LSP"
 			keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
 
-			require("tailwindcss-colors").buf_attach(bufnr)
+			if client.name == "tailwindcss" then
+				require("tailwindcss-colors").buf_attach(bufnr)
+			end
 		end
 
 		-- used to enable autocompletion (assign to every lsp server config)
@@ -95,7 +97,10 @@ return {
 			on_attach = on_attach,
 		})
 
-		lspconfig["jdtls"].setup({})
+		lspconfig["jdtls"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
 
 		-- configure graphql language server
 		lspconfig["graphql"].setup({

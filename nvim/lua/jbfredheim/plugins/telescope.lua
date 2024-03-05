@@ -11,6 +11,7 @@ return {
 		local actions = require("telescope.actions")
 
 		telescope.setup({
+
 			defaults = {
 				path_display = { "truncate " },
 				mappings = {
@@ -20,6 +21,9 @@ return {
 						["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 					},
 				},
+			},
+			find_files = {
+				hidden = true,
 			},
 		})
 
