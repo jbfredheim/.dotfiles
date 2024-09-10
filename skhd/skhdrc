@@ -19,6 +19,15 @@ shift + cmd - 4 : "${XDG_CONFIG_HOME}"/scripts/yabai_move_window_to_space 4
 shift + cmd - 5 : "${XDG_CONFIG_HOME}"/scripts/yabai_move_window_to_space 5
 shift + cmd - 6 : "${XDG_CONFIG_HOME}"/scripts/yabai_move_window_to_space 6
 shift + cmd - 7 : "${XDG_CONFIG_HOME}"/scripts/yabai_move_window_to_space 7
+shift + cmd - 8 : "${XDG_CONFIG_HOME}"/scripts/yabai_move_window_to_space 8
+shift + cmd - 9 : "${XDG_CONFIG_HOME}"/scripts/yabai_move_window_to_space 9
+shift + cmd - 0 : "${XDG_CONFIG_HOME}"/scripts/yabai_move_window_to_space 10
+
+# Move space to display
+shift + ctrl + cmd - 1 : yabai -m space --display 1 
+shift + ctrl + cmd - 2 : yabai -m space --display 2
+shift + ctrl + cmd - 3 : yabai -m space --display 3
+
 
 # focus space
 cmd - 1 : yabai -m space --focus 1
@@ -28,6 +37,9 @@ cmd - 4 : yabai -m space --focus 4
 cmd - 5 : yabai -m space --focus 5
 cmd - 6 : yabai -m space --focus 6
 cmd - 7 : yabai -m space --focus 7
+cmd - 8 : yabai -m space --focus 8
+cmd - 9 : yabai -m space --focus 9
+cmd - 0 : yabai -m space --focus 10
 
 # stop/start/restart
 cmd - q : yabai --stop-service

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+args=("$@")
+
+yabai -m query --spaces --space "${args[0]}" > /dev/null 2>&1
+if [ $? -eq 0 ] ; then
+  yabai -m space --focus "${args[0]}"
+fi

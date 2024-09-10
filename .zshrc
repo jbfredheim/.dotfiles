@@ -62,6 +62,14 @@ alias gf="git fetch"
 alias gp="git pull"
 alias gP="git push"
 
+# Kubernetes
+alias k="kubectl"
+alias kg="kubectl get"
+alias kgp="kubectl get pods"
+alias kd="kubectl describe"
+alias kgpns="kubectl get pod -n staging"
+
+
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"

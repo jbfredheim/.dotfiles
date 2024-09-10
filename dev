@@ -11,7 +11,7 @@ linked_folders=()  # Initialize an empty array to store linked folders
 for folder in */; do
   if [ -d "$folder" ]; then
     case $folder in
-      "nvim/"|"alacritty/")
+      "nvim/"|"alacritty/"|"scripts/")
         ln -s "$current_dir/$folder" "$config_dir/"
         linked_folders+=("$folder")
         ;;
