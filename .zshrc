@@ -48,8 +48,6 @@ alias vcon="nvim $XDG_CONFIG_HOME"
 alias vc="nvim $XDG_CONFIG_HOME"
 alias vz="nvim ~/.zshrc"
 alias dev="cd ~/dev"
-alias auge="cd ~/dev/auge/"
-alias vbd="nvim ~/dev/auge/barad-dur/"
 alias c=clear
 
 # Git alias'
@@ -69,8 +67,9 @@ alias kgp="kubectl get pods"
 alias kd="kubectl describe"
 alias kgpns="kubectl get pod -n staging"
 
+alias kbno="setxkbmap -layout no -option ctrl:nocaps"
+alias kbus="setxkbmap -layout us -option ctrl:nocaps"
 
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+if [ "$OS_NAME" = 'Linux' ]; then
+    setxkbmap -layout us -option ctrl:nocaps
+fi
