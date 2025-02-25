@@ -40,7 +40,7 @@ return {
 			toggle_telescope(harpoon:list()) --harpoon.ui:toggle_quick_menu(harpoon:list())
 		end, { desc = "Open harpoon window" })
 		vim.keymap.set("n", "<leader>a", function()
-			harpoon:list():append()
+			harpoon:list():add()
 		end)
 	end,
 }

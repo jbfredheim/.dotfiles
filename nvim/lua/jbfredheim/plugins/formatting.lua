@@ -7,24 +7,34 @@ return {
 
 		conform.setup({
 			formatters_by_ft = {
-				javascript = { "prettier" },
-				typescript = { "prettier" },
-				javascriptreact = { "prettier" },
-				typescriptreact = { "prettier" },
-				svelte = { "prettier" },
 				css = { "prettier" },
 				html = { "prettier" },
 				json = { "prettier" },
 				yaml = { "prettier" },
 				markdown = { "prettier" },
-				graphql = { "prettier" },
 				lua = { "stylua" },
-				python = { "isort", "black" },
+				qml = { "qmlformat_mr" },
+				cpp = { "clang_format_mr" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
 				async = false,
 				timeout_ms = 1000,
+			},
+			formatters = {
+				qmlformat_mr = {
+					command = "/usr/local/bin/qmlformat-mr",
+					args = { "-n", "-l", "unix", "--inplace", "-f", "$FILENAME" },
+					stdin = false,
+					tmpfile_format = ".conform.$RANDOM.$FILENAME",
+				},
+				clang_format_mr = {
+					command = "/usr/local/bin/clang-format-mr",
+					args = { "--Werror", "--style=file", "--fallback-style=none" },
+					stdin = true,
+					cwd = require("conform.util").root_file({ ".clang-format" }),
+					require_cwd = true,
+				},
 			},
 		})
 

@@ -2,7 +2,7 @@ return {
 	"nvim-treesitter/nvim-treesitter",
 	config = function()
 		require("nvim-treesitter").setup({
-			ensure_installed = { "c", "lua", "vim", "query", "typescript", "python", "java" },
+			ensure_installed = { "c", "cpp", "lua", "vim", "query", "typescript", "python", "java" },
 
 			sync_install = false,
 			auto_install = true,
